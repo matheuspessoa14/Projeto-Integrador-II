@@ -1,0 +1,345 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+header {
+  background-color: #1A4E7E;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.login-btn {
+  background-color: #1A4E7E;
+  color: white;
+  padding: 6px 16px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+.form-container {
+  display: block;
+  text-align: center;
+  margin: 10px 0 4px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  text-align: left;
+}
+
+.form-options a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.form-options a:hover {
+  color: #B72020;
+  text-decoration: underline;
+}
+
+.icon-img {
+  max-width: 40px;
+  height: auto;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.dob {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.dob select {
+  flex: 1;
+}
+
+.gender-options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.gender-box {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+.gender-box input[type="radio"] {
+  accent-color: #B72020;
+  width: 16px;
+  height: 16px;
+}
+
+.submit-btn {
+  background-color: #1A4E7E;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.cadastro-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.cadastro-form input,
+.cadastro-form select {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin: 5px 0 15px;
+  text-decoration: none;
+  color: black;
+}
+
+footer {
+  background-color: #1A4E7E;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 8px;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.footer .social a i {
+  color: black !important;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+.footer .social a i:hover {
+  color: #B72020 !important;
+  transform: scale(1.2);
+}
+
+button,
+.submit-btn,
+.login-btn,
+nav a {
+  background-color: #1A4E7E;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+button:hover,
+.submit-btn:hover,
+.login-btn:hover {
+  background-color: #B72020;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+/* termina o css do cadastrar e login*/
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #FBFBFB;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-logo img {
+  width: 30vw;
+  max-width: 500px;
+  min-width: 250px;
+  height: auto;
+}
+
+.red {
+  color: #B72020;
+}
+
+.funcionalidades {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cards-funcionalidade {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 25px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+}
+
+.depoimentos {
+  background-color: #FBFBFB;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.depoimentos-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.depoimento {
+  background-color: #DEE0E4;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+
+.autor-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.autor-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 12px;
+  object-fit: cover;
+}
+
+.autor-info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.social a img {
+  width: 24px;
+  margin: 0 5px;
+}

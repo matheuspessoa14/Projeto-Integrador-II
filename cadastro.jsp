@@ -16,21 +16,21 @@
       <a href="#" class="login-btn">Sobre Nós</a>
       <a href="#" class="login-btn">Consultoria</a>
       <a href="#" class="login-btn">Suporte</a>
-      <a href="Login.html" class="login-btn">Login</a>
+      <a href="login.jsp" class="login-btn">Login</a>
     </nav>
   </header>
 
   <main>
-    <form class="form-container Cadastro-form">
+    <form name="form2" action="atualiza_cadastro.jsp" class="form-container Cadastro-form" method="POST" onsubmit="return true">
       <div class="icon">
         <img src="Imagem/Logo.PNG" alt="Logo AgendaUp">
       </div>
-      <input type="text" placeholder="Nome Completo" required>
+      <input type="text" placeholder="Nome Completo" name="nome" required>
       <input type="tel" id="cpf" name="cpf" placeholder="Digite seu CPF" maxlength="11"
         oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
       <span id="cpf-error" style="color: red; font-size: 0.8rem;"></span>
-      <input type="email" placeholder="E-mail" required>
-      <input type="password" placeholder="Senha" required>
+      <input type="email" placeholder="E-mail" name="email" required>
+      <input type="password" placeholder="Senha" name="senha" required>
 
       <label>Data de Nascimento:</label>
       <div class="dob">
@@ -51,9 +51,11 @@
         </label>
         <label class="gender-box">
           Outros
-          <input type="radio" name="genero" value="Outros">
+          <input type="radio" name="genero" value="O">
         </label>
       </div>
+
+      <p id="mensagem"></p>
 
       <button type="submit" class="submit-btn">CADASTRA-SE</button>
     </form>
@@ -104,6 +106,23 @@
       option.textContent = a;
       anoSelect.appendChild(option);
     }
+  </script>
+
+  <script>
+    // Mensagem de Sucesso ou Erro
+    <%
+        String mensagem = (String) session.getAttribute("mensagem");
+    %>
+        let msg = "<%= mensagem == null ? "" : mensagem %>";
+      if (msg != "") {
+        document.getElementById("mensagem").innerHTML = msg;
+      }
+    <%
+      // Limpa mensagem da sessÃ£o
+      if (mensagem != null) {
+        session.removeAttribute("mensagem");
+      }
+    %>
   </script>
 </body>
 

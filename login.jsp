@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -16,23 +17,25 @@
       <a href="#" class="login-btn">Sobre Nós</a>
       <a href="#" class="login-btn">Consultoria</a>
       <a href="#" class="login-btn">Suporte</a>
-      <a href="Login.html" class="login-btn">Login</a>
+      <a href="login.jsp" class="login-btn">Login</a>
     </nav>
   </header>
 
   <main>
-    <form class="form-container login-form">
+    <form name="form1" action="autentica_usuario.jsp" class="form-container login-form" method="POST" onsubmit="return true">
       <div class="icon">
         <img src="Imagem/Logo.PNG" alt="Logo AgendaUp">
       </div>
       <label for="usuario">USUÁRIO:</label>
-      <input type="email" placeholder="E-mail" required>
+      <input type="email" placeholder="E-mail" name="email" required>
+
       <label for="senha">SENHA:</label>
-      <input type="password" placeholder="Senha" required>
+      <input type="password" placeholder="Senha" name="senha" required>
+      <p id="mensagem"></p>
 
       <div class="form-options">
         <a href="#">Esqueceu a Senha?</a>
-        <a href="Cadastro.html">Cadastrar-se</a>
+        <a href="cadastro.jsp">Cadastrar-se</a>
       </div>
 
       <button type="submit" class="submit-btn">ENTRAR</button>
@@ -55,6 +58,24 @@
     </div>
     <p>AgendaUp @ 2025. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Mensagem de Sucesso ou Erro
+    <%
+        String mensagem = (String) session.getAttribute("mensagem");
+    %>
+        let msg = "<%= mensagem == null ? "" : mensagem %>";
+      if (msg != "") {
+        document.getElementById("mensagem").innerHTML = msg;
+      }
+    <%
+      // Limpa mensagem da sessÃ£o
+      if (mensagem != null) {
+        session.removeAttribute("mensagem");
+      }
+    %>
+  </script>
+
 </body>
 
 </html>

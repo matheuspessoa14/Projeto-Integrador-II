@@ -31,7 +31,7 @@
     if (!rs.isBeforeFirst()) {
       mensagem = "E-mail ou senha inválido";
     } else {
-      destino = "home.html";
+      destino = "index.html";
     }
 
   } catch (SQLException | ClassNotFoundException e) {

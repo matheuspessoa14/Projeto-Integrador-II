@@ -8,6 +8,7 @@
   <title>Login | AgendaUp</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="js/login.js" defer></script> 
 </head>
 
 <body>
@@ -22,15 +23,15 @@
   </header>
 
   <main>
-    <form name="form1" action="autentica_usuario.jsp" class="form-container login-form" method="POST" onsubmit="return true">
+    <form name="form1" action="autentica_usuario.jsp" class="form-container login-form" method="POST" onsubmit="return validarCamposLogin()">
       <div class="icon">
         <img src="Imagem/Logo.PNG" alt="Logo AgendaUp">
       </div>
       <label for="usuario">USUÁRIO:</label>
-      <input type="email" placeholder="E-mail" name="email" required>
+      <input type="email" placeholder="E-mail" name="email" >
 
       <label for="senha">SENHA:</label>
-      <input type="password" placeholder="Senha" name="senha" required>
+      <input type="password" placeholder="Senha" name="senha" >
       <p id="mensagem"></p>
 
       <div class="form-options">

@@ -62,7 +62,7 @@
     }
   } catch (SQLException | ClassNotFoundException e) {
     e.printStackTrace();
-    mensagem = "Erro ao conectar ao banco de dados ou inserir os dados." + e.getMessage();
+    mensagem = "Erro ao conectar ao banco de dados ou inserir os dados.";
   } finally {
     try {
       conexao.close();

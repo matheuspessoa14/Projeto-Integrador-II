@@ -8,6 +8,7 @@
   <title>Cadastro | AgendaUp</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="js/cadastro.js"></script>
 </head>
 
 <body>
@@ -22,16 +23,16 @@
   </header>
 
   <main>
-    <form name="form2" action="atualiza_cadastro.jsp" class="form-container Cadastro-form" method="POST" onsubmit="return true">
+    <form name="form2" action="atualiza_cadastro.jsp" class="form-container Cadastro-form" method="POST" onsubmit="return validarCampos()">
       <div class="icon">
         <img src="Imagem/Logo.PNG" alt="Logo AgendaUp">
       </div>
-      <input type="text" placeholder="Nome Completo" name="nome" required>
+      <input type="text" placeholder="Nome Completo" name="nome" >
       <input type="tel" id="cpf" name="cpf" placeholder="Digite seu CPF" maxlength="11"
-        oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+        oninput="this.value = this.value.replace(/[^0-9]/g, '')" >
       <span id="cpf-error" style="color: red; font-size: 0.8rem;"></span>
-      <input type="email" placeholder="E-mail" name="email" required>
-      <input type="password" placeholder="Senha" name="senha" required>
+      <input type="email" placeholder="E-mail" name="email" >
+      <input type="password" placeholder="Senha" name="senha" >
 
       <label>Data de Nascimento:</label>
       <div class="dob">

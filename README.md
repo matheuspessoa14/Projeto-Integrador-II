@@ -1,2 +1,4 @@
-# O que falta implementar?
-## fazer a interação da página Login na hora que apertar para entrar e ela se direcionar a página Home
+Projeto Integrador II
+
+Projeto final do 2 semestre, consiste na primeira funcionalidade que o site terá que seria a parte de login e cadastro, foram utlizados html, css, java, javascript e sql
+

@@ -33,5 +33,5 @@ O projeto foi construído utilizando **HTML, CSS, Java, JavaScript e SQL**, com 
 - **Daniel Moura Carreiro** ([Daniel-moura-carreiro](https://github.com/Daniel-moura-carreiro))  
 - **Lara Miranda** ([lara-peddinghausen](https://github.com/lara-peddinghausen))  
 - **Matheus Pessoa** ([matheuspessoa14](https://github.com/matheuspessoa14))  
-- **Maria Eduarda Ramos**
+- **Maria Eduarda Ramos** ([mariaeramos18](https://github.com/mariaeramos18))
 
